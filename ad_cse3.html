@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VA2:D3</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #fff;
+      font-weight: bold;
+    }
+
+    svg {
+      width: 100%;
+      height: 700px;
+    }
+
+    .tooltip {
+      position: absolute;
+      background: #fff;
+      border: 1px solid #aaa;
+      padding: 8px;
+      font-size: 13px;
+      border-radius: 5px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+      font-weight: bold;
+    }
+
+    .legend {
+      position: absolute;
+      top: 40px;
+      right: 30px;
+      background: white;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .legend div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .legend-color {
+      width: 14px;
+      height: 14px;
+      margin-right: 8px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<h1>Streamgraph of Student Enrollment Trends by Department Over Time</h1>
+<svg></svg>
+<div class="tooltip"></div>
+<div class="legend" id="legend"></div>
+
+<script src="ad_cse3.js"></script>
+</body>
+</html>
